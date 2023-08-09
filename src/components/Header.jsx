@@ -1,26 +1,11 @@
 import React from 'react';
-import './header.css';
 import { Link as LinkRouter } from 'react-router-dom'
 import links from '../utiles/links'
 import useShowMenu from '../utiles/useShowMenu';
 
 
-/* Show/hide menu */
-
-
-
-
-/* Header */
-
-
-
-
-
 const Header = () => {
   const [showMenu, toggleMenu] = useShowMenu();
-
-  
-
 
   return (
     <header className='bg-gray-800'>
