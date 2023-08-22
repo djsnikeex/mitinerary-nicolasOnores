@@ -18,7 +18,7 @@ const NewsCard = ({ city, country, image }) => {
         </div>
       </div>
       <main className="p-5 z-10">
-        <a href="#" className="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">{country}</a>
+        <h3  className="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">{country}</h3>
       </main>
     </div>
   );

@@ -28,7 +28,7 @@ export default {
     extend: {
       backgroundImage: theme => ({
         'hero-bg': "url('https://media1.travelguide.de/media/2022/01/karibik.jpeg')",
-        'cities-bg': "url('https://www.xtrafondos.com/descargar.php?id=3038&resolucion=3840x2160')",
+        
         
         }),
 
