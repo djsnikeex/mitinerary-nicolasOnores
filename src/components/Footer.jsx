@@ -4,9 +4,11 @@ import React from 'react'
 const Footer = () => {
   return (
      <footer 
-      className="footer bg-gray-800  className='relative py-3 flex flex-col items-center  overflow-hidden"
+      className="footer bg-gray-800  py-3 flex flex-col items-center  overflow-hidden  bg-cover bg-center h-[20vh]
+      "
     >
-      <div className='relative z-[1] container m-auto px-6 md:px-12'>
+      <div className='relative z-[1] container m-auto px-6 md:px-12
+      '>
           <div className='m-auto md:w-10/12 lg:w-8/12 xl:w-6/12'>
             <div className='flex flex-wrap items-center justify-between md:flex-nowrap'>
                 <div className='w-full space-x-12 flex justify-center text-gray-300 sm:w-7/12 md:justify-start'>
