@@ -8,7 +8,9 @@ const Header = () => {
   const [showMenu, toggleMenu] = useShowMenu();
 
   return (
-    <header className='bg-gray-800'>
+    <header className='bg-gray-800 
+    
+    '>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           

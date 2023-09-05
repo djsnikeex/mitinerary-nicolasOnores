@@ -128,7 +128,7 @@ const Carrousel = () => {
               />
               <div className='relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-50 rounded-xl rounded-b-none'>
                 <p className='text-2xl text-center drop-shadow-darkShadow font-bold uppercase  tracking-widest text-lime-400'>
-                  {ciudad.ciudad}
+                  {ciudad.nombre}
                 </p>
                 <p className="text-xl text-center drop-shadow-darkShadow font-bold tracking-widest  text-yellow-400 sm:text-2xl">
                   {ciudad.pais}

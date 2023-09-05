@@ -29,14 +29,13 @@ export default {
       backgroundImage: theme => ({
         'hero-bg': "url('https://media1.travelguide.de/media/2022/01/karibik.jpeg')",
         
+        
         }),
-        
-        
-      
 
-
+     
     },
   },
+
   plugins: [
     require("daisyui"),
   ],
