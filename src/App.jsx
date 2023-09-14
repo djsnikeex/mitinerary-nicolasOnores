@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     let url = `http://localhost:4000/api/auth/token`
     let token = localStorage.getItem('token')
-    console.log(token)
+    
     if(token){
       let config = {
         headers: {

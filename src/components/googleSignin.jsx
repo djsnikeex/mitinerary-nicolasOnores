@@ -28,6 +28,9 @@ export const GoogleSignIn = () => {
     
 
     useEffect(() => {
+        
+
+
         if(window.google) {
             window.google.accounts.id.initialize({
                 client_id: "709650831228-dkcpo3iep5ngs2br1gj2bm8nvj7qsr86.apps.googleusercontent.com",
@@ -35,9 +38,11 @@ export const GoogleSignIn = () => {
             });
             window.google.accounts.id.renderButton(
                 googleButton.current,
-                { type: 'standard', shape: 'pill',size: "medium", text: 'signin_with', theme: 'outline'
-            }
+                { type: 'standard', shape: 'pill',size: "medium", text: 'signin', theme: 'outline',
+                locale: 'en' }
+            
             );
+            
         }}, [])
 
     return (

@@ -64,10 +64,7 @@ export const user_login_google = createAsyncThunk('user_login_google', async (ob
             text: error.response.data.message,
             confirmButtonText: 'Try again'
             })
-        return {
-            user: null
-
-        }
+        
     }
 })
 
