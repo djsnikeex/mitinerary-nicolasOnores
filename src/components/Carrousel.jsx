@@ -121,7 +121,7 @@ const Carrousel = () => {
             {ciudades.slice(index, index + 4).map((ciudad) => (
               
 
-              <a  className='block group relative rounded-xl border-indigo-700 border-2 border-spacing-5 bg-black '>
+              <a  key={ciudad.id} className='block group relative rounded-xl border-indigo-700 border-2 border-spacing-5 bg-black '>
               <img
                 className='absolute rounded-xl inset-0 object-cover object-center h-full w-full'
                 src={ciudad.imagen}

@@ -8,6 +8,7 @@ import NotFound from "../components/NotFound";
 import { useDispatch, useSelector } from 'react-redux';
 import { filter_cities, get_cities } from "../store/actions/cityActions";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const cities = () => {
@@ -21,15 +22,34 @@ const cities = () => {
     dispatch(get_cities())
       }, []);
 
-  const handleInputChange = () => {
-    dispatch(filter_cities({
+  const handleInputChange = async () => {
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: "You will be redirected to the city you are looking for",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+
+      confirmButtonText: 'Yes, go!'
+    })
+    if (result.isConfirmed) {
+      dispatch(filter_cities({
       name: inputSearch.current.value
-  }))
+    }))}
+    else if (result.isDenied) {
+      Swal.fire('Searchcanceled','', 'info')
+    }
+
+
+
+
   }
 
   const refreshPage = () => {
     navigate(0);
 }
+
 
 
   return (

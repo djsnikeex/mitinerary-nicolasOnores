@@ -28,6 +28,7 @@ export default {
     extend: {
       backgroundImage: theme => ({
         'hero-bg': "url('https://media1.travelguide.de/media/2022/01/karibik.jpeg')",
+        'hero-bg2': "url('https://wallpapercave.com/wp/wp1878493.jpg')",
         
         
         }),
