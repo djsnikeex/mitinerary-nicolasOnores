@@ -15,7 +15,7 @@ export const user_photo = createAction('user_photo', (obj) => {
 export const user_login = createAsyncThunk('user_login', async (obj) => {
     try {
         const { data } = await axios.post('http://localhost:4000/api/auth/signin', obj.data);
-        console.log(data);
+        
         localStorage.setItem('token', data.response.token)
         localStorage.setItem('user', JSON.stringify(data.response.user))
         Swal.fire({
@@ -43,7 +43,7 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
 export const user_login_google = createAsyncThunk('user_login_google', async (obj) => {
     try {
         const { data } = await axios.post('http://localhost:4000/api/auth/google', obj.data);
-        console.log(data);
+        
         localStorage.setItem('token', data.response.token)
         localStorage.setItem('user', JSON.stringify(data.response.user))
         Swal.fire({
@@ -74,7 +74,7 @@ export const user_login_google = createAsyncThunk('user_login_google', async (ob
 export const user_register = createAsyncThunk('user_register', async (obj) => {
     try {
         const { data } = await axios.post('http://localhost:4000/api/auth/signup', obj.data);
-        console.log(data);
+        
         Swal.fire({
             icon: 'success',
             title: 'Welcome!',
@@ -87,7 +87,7 @@ export const user_register = createAsyncThunk('user_register', async (obj) => {
             message: data.message,
         }
     } catch (error) {
-        console.log(error);
+        
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -103,7 +103,7 @@ export const user_register = createAsyncThunk('user_register', async (obj) => {
 
 
 export const user_token = createAction('user_token', (user) => {
-    console.log(user)
+    
     return {
         payload: {
             user

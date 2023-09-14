@@ -11,15 +11,27 @@ const ItineraryCard = ({id}
       
   
       const [itinerary, setItinerary] = useState([]);
-
+      const [user, setUser] = useState([]);
       useEffect(() => {
         
         axios.get(`http://localhost:4000/api/itineraries/${id}`)
           .then((response) => {
             setItinerary(response.data.itinerary);
-            
+            console.log(response.data.itinerary)
           })
     
+          .catch((error) => {
+            console.log(error);
+          });
+      }, []);
+
+      useEffect(() => {
+
+        axios.get(`http://localhost:4000/api/users/${itinerary.userId}`)
+          .then((response) => {
+            setUser(response.data.user);
+          })
+
           .catch((error) => {
             console.log(error);
           });
@@ -57,9 +69,11 @@ const ItineraryCard = ({id}
               <span className='text-sm font-medium text-white'> #{itinerary.hashtags}</span>
 
           <span className='text-sm font-medium text-white'>Likes: {itinerary.rating}</span>
-          
-          <span className='text-sm font-medium text-white'>City: {itinerary.cityId}</span>
-          <span className='text-sm font-medium text-white'>Itinerary: {itinerary._id}</span>
+         
+          <div className='flex flex-row justify-center items-center gap-2'>
+            <img className='h-8 w-8 rounded-full object-cover' src={user.image} alt='profile' />
+            <span className='text-sm font-medium text-white'>{user.userName}</span>
+            </div>
         </div>
 
 <div>
