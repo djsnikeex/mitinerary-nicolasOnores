@@ -38,7 +38,7 @@ export const GoogleSignIn = () => {
             });
             window.google.accounts.id.renderButton(
                 googleButton.current,
-                { type: 'standard', shape: 'pill',size: "medium", text: 'signin', theme: 'outline',
+                { type: 'standard', shape: 'rectangle',size: "medium", text: 'signin', theme: 'filled_black',
                 locale: 'en' }
             
             );
@@ -46,6 +46,6 @@ export const GoogleSignIn = () => {
         }}, [])
 
     return (
-        <div ref={googleButton}></div>
+        <div style={{ colorScheme: 'light' }} ref={googleButton}></div>
     )
 }
