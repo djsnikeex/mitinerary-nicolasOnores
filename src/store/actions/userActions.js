@@ -1,6 +1,7 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import Swal from 'sweetalert2'
+import  apiUrl from '../../api'
 
 export const user_photo = createAction('user_photo', (obj) => {
     console.log(obj)
@@ -14,7 +15,7 @@ export const user_photo = createAction('user_photo', (obj) => {
 
 export const user_login = createAsyncThunk('user_login', async (obj) => {
     try {
-        const { data } = await axios.post('http://localhost:4000/api/auth/signin', obj.data);
+        const { data } = await axios.post(`${apiUrl}/auth/signin`, obj.data);
         
         localStorage.setItem('token', data.response.token)
         localStorage.setItem('user', JSON.stringify(data.response.user))
@@ -42,7 +43,7 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
 
 export const user_login_google = createAsyncThunk('user_login_google', async (obj) => {
     try {
-        const { data } = await axios.post('http://localhost:4000/api/auth/google', obj.data);
+        const { data } = await axios.post(`${apiUrl}/auth/google`, obj.data);
         
         localStorage.setItem('token', data.response.token)
         localStorage.setItem('user', JSON.stringify(data.response.user))
@@ -70,14 +71,14 @@ export const user_login_google = createAsyncThunk('user_login_google', async (ob
 
 export const user_register = createAsyncThunk('user_register', async (obj) => {
     try {
-        const { data } = await axios.post('http://localhost:4000/api/auth/signup', obj.data);
+        const { data } = await axios.post(`${apiUrl}/auth/signup`, obj.data);
         
         Swal.fire({
             icon: 'success',
             title: 'Welcome!',
             text: data.message,
             confirmButtonText: 'OK',
-            link: 'http://localhost:5137/signin'
+            
             })
 
         return {

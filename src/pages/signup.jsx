@@ -3,9 +3,10 @@ import "../styles/card.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { user_register } from "../store/actions/userActions";
-import { GoogleSignIn } from "../components/googleSignIn";
+import { GoogleSignIn } from "../components/googleSignin";
 import { Link, redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 import Swal from "sweetalert2";
 
 const signup = () => {
@@ -46,9 +47,11 @@ const signup = () => {
   return (
     <>
       <div className="flex items-center justify-center   bg-hero-bg2 bg-cover bg-top bg-no-repeat py-12 px-4 sm:px-6 lg:px-8 h-[80vh]">
-        <div className="max-w-md w-full space-y-8 bg-white
-        border border-black border-spacing-5  rounded-lg
-        px-4 py-6 shadow-xl sm:rounded-lg sm:px-10 sm:py-8 ">
+        <div className="max-w-md w-full space-y-8  rounded-lg
+        px-4 py-6 shadow-xl sm:rounded-lg sm:px-10 sm:py-8 "
+          id="card"
+        
+        >
           <div>
             <img
               className="mx-auto h-12 w-auto"

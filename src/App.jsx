@@ -7,11 +7,11 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios'
 import { user_token } from './store/actions/userActions';
-
+import apiUrl  from './api'
 function App() {
   let dispatch = useDispatch()
   useEffect(() => {
-    let url = `http://localhost:4000/api/auth/token`
+    let url = `${apiUrl}/auth/token`
     let token = localStorage.getItem('token')
     
     if(token){
