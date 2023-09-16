@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import Axios from "axios";
 import cities from "../../components/cities";
-import {apiUrl} from '../../api'
+import  apiUrl from '../../api.js'
 
 
 export const get_cities = createAsyncThunk('get_cities', async () => {

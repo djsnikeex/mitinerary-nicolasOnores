@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios'
 import { user_token } from './store/actions/userActions';
-import { apiUrl } from './api'
+import apiUrl  from './api'
 function App() {
   let dispatch = useDispatch()
   useEffect(() => {

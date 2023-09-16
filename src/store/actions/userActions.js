@@ -1,7 +1,7 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import Swal from 'sweetalert2'
-import { apiUrl} from '../../api'
+import  apiUrl from '../../api'
 
 export const user_photo = createAction('user_photo', (obj) => {
     console.log(obj)
