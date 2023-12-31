@@ -7,7 +7,7 @@ export const get_itineraries = createAsyncThunk('get_itineraries', async (e) => 
     try {
         const res = await Axios.get( `${apiUrl}/itineraries`)
 
-        // console.log(response.data.events)
+        
         return {
             itineraries: res.data.itineraries
 
