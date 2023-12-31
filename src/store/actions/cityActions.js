@@ -8,7 +8,7 @@ export const get_cities = createAsyncThunk('get_cities', async () => {
     try {
         const res = await Axios.get(`${apiUrl}/cities`)
 
-        // console.log(response.data.events)
+       
         return {
             cities: res.data.cities
         }
